@@ -9,69 +9,65 @@
   <url>http://maven.apache.org</url>
   <dependencies>
   
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <!-- JUnit dependency -->
 	<dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
 	    <version>4.12</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+	<!-- Selenium dependency -->
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-chrome-driver</artifactId>
 	    <version>3.3.1</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+	<!-- JasperReport dependencies Start -->
 	<dependency>
 	    <groupId>net.sf.jasperreports</groupId>
 	    <artifactId>jasperreports</artifactId>
 	    <version>5.2.0</version>
 	</dependency>
 
-	<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
 	<dependency>
 	    <groupId>commons-beanutils</groupId>
 	    <artifactId>commons-beanutils</artifactId>
 	    <version>1.8.3</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
 	<dependency>
 	    <groupId>commons-collections</groupId>
 	    <artifactId>commons-collections</artifactId>
 	    <version>3.2.2</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/commons-digester/commons-digester -->
 	<dependency>
 	    <groupId>commons-digester</groupId>
 	    <artifactId>commons-digester</artifactId>
 	    <version>2.1</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 	<dependency>
 	    <groupId>commons-logging</groupId>
 	    <artifactId>commons-logging</artifactId>
 	    <version>1.1.1</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
 	<dependency>
 	    <groupId>com.lowagie</groupId>
 	    <artifactId>itext</artifactId>
 	    <version>2.1.7</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
 	<dependency>
 	    <groupId>org.codehaus.groovy</groupId>
 	    <artifactId>groovy-all</artifactId>
 	    <version>2.1.7</version>
 	</dependency>
+	<!-- JasperReport dependencies End -->
 	
+	<!-- WebJar dependencies Start -->
 	<dependency>
       <groupId>org.webjars</groupId>
       <artifactId>webjars-servlet-2.x</artifactId>
@@ -84,12 +80,12 @@
       <version>3.3.6</version>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
 	<dependency>
 	    <groupId>org.webjars</groupId>
 	    <artifactId>jquery</artifactId>
 	    <version>2.1.1</version>
 	</dependency>
+	<!-- WebJar dependencies End-->
     
 	
   </dependencies>

@@ -9,5 +9,5 @@ Environment used to create this project:
 - Maven 3.3.9
 - The project uses JDK 1.8.0_111
 - IReport 5.6.0
-- JDK 1.7.0 (IReport just works on JDK7. Alter the file "iReport-5.6.0/etc/ireport.conf" to set the JDK 7).
+- JDK 1.7.0 (IReport just works on JDK7. Edit the file "iReport-5.6.0/etc/ireport.conf" to set the JDK 7).
 - Browser driver downloaded manually from Selenium website (http://www.seleniumhq.org/download/). This project uses "chromedriver.exe".

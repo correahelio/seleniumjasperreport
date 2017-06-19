@@ -10,13 +10,13 @@
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="258" splitType="Stretch">
+		<band height="350" splitType="Stretch">
 			<image>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="235" uuid="50453865-b535-4bbb-b07b-d151fefcb4b0"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="20" width="555" height="330" uuid="50453865-b535-4bbb-b07b-d151fefcb4b0"/>
 				<imageExpression><![CDATA[$F{image}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="235" width="100" height="20" uuid="4061fb39-0309-464d-8227-4fffa5d27523"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="20" uuid="4061fb39-0309-464d-8227-4fffa5d27523"/>
 				<textElement>
 					<font fontName="Serif"/>
 				</textElement>

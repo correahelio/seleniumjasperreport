@@ -11,7 +11,7 @@
 	<!-- Main div that contains the screen content -->
 	<div id="div" class="panel panel-primary">
 	
-		<!-- Bootstrap class to display the footer panel -->
+		<!-- Bootstrap class to display the header panel -->
   		<div class="panel panel-default">
 	  		<div class="panel-heading">
 	  			<p>Header panel</p>
@@ -24,7 +24,7 @@
 		</div>
 	
 		<!-- Header title -->
-		<div class="panel-heading">This is the header title!</div>
+		<div class="panel-heading">This is the page title!</div>
 		
 		<!-- Bootstrap class to display the screen content -->
   		<div class="jumbotron">

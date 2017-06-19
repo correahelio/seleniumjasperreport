@@ -1,17 +1,11 @@
 package com.test.selenium;
 
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.imageio.ImageIO;
 
 import net.sf.jasperreports.engine.JRException;
 
@@ -20,7 +14,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -72,9 +65,8 @@ public class SeleniumJUnit {
 		//Thread.sleep is necessary since selenium runs very fast
 		Thread.sleep(3000L);
 		
-		//Taking the first evidence with focus on div that has id = 'div'
-		element = driver.findElement(By.xpath("//div[@id='div']"));
-		takeScreenshotByElement(element, "Evidence Number 1");
+		//Taking another evidence of the first step
+		takeScreenshot("Evidence Number 1");
 		
 		//Taking the second field and typing the value "Correa"
 		element = driver.findElement(By.xpath("//input[@id='secondField']"));
@@ -83,9 +75,9 @@ public class SeleniumJUnit {
 		//Thread.sleep is necessary since selenium runs very fast
 		Thread.sleep(3000L);
 
-		//Taking another evidence with focus on div that has id = 'div'
+		//Taking another evidence of the second step
 		element = driver.findElement(By.xpath("//div[@id='div']"));
-		takeScreenshotByElement(element, "Evidence Number 2");
+		takeScreenshot("Evidence Number 2");
 
 		//Clicking on the "sendButton"
 		driver.findElement(By.xpath("//input[@id='sendButton' and @type='button']")).click();
@@ -93,9 +85,8 @@ public class SeleniumJUnit {
 		//Thread sleep is necessary to appear the "alert-div" 
 		Thread.sleep(2000L);
 		
-		//Taking another evidence with focus on div that has id = 'div'
-		element = driver.findElement(By.xpath("//div[@id='div']"));
-		takeScreenshotByElement(element, "Evidence Number 3");
+		//Taking evidence of the third step
+		takeScreenshot("Evidence Number 3");
 		
 		//Clicking on the "cancelButton"
 		driver.findElement(By.xpath("//input[@id='cancelButton' and @type='button']")).click();
@@ -103,7 +94,7 @@ public class SeleniumJUnit {
 		//Thread sleep is necessary to disappear the "alert-div"
 		Thread.sleep(2000L);
 		
-		//Taking another evidence of the entire screen
+		//Taking evidence of the fourth step
 		takeScreenshot("Evidence Number 4");
 	}
 	
@@ -121,36 +112,4 @@ public class SeleniumJUnit {
 		//Adding to the list of beans
 		listImageBean.add(bean);
 	}
-	
-	//This method is used to take specific element screenshot
-	private void takeScreenshotByElement(WebElement element, String screenshotDescription) throws IOException {
-		
-		//Taking element position
-		Point p = element.getLocation();
-		int width = element.getSize().getWidth();
-		int height = element.getSize().getHeight();
-		
-		//Taking screen shot from selenium
-		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		
-		//Taking the image as buffer
-		BufferedImage img = ImageIO.read(screenshot);
-		
-		//Creating another buffer in accordance with screenshot position
-    	BufferedImage dest = img.getSubimage(p.getX(), p.getY(), width, height);
-    	
-    	//Converting BuffferedImage to InputStream
-    	ByteArrayOutputStream os = new ByteArrayOutputStream();
-    	ImageIO.write(dest, "jpg", os);
-    	InputStream is = new ByteArrayInputStream(os.toByteArray());
-		
-		//Creating our bean and setting the image and imageName to be displayed in the report file
-		ImageBean bean =  new ImageBean();
-		bean.setImageName(screenshotDescription);
-		bean.setImage(is);
-		
-		//Adding to the list of beans
-		listImageBean.add(bean);
-	}
-	
 }

@@ -11,6 +11,14 @@
 	<!-- Main div that contains the screen content -->
 	<div id="div" class="panel panel-primary">
 	
+		<!-- Bootstrap class to display the footer panel -->
+  		<div class="panel panel-default">
+	  		<div class="panel-heading">
+	  			<p>Header panel</p>
+	  			<p>All the Header content should be here!</p>
+	  		</div>
+		</div>
+	
 		<!-- Div to display the values typed -->
 		<div id="alert-div" class="alert alert-success" role="alert" style="display: none;">
 		</div>
@@ -54,8 +62,8 @@
 
 	//Send button function
 	function onSendClick() {
-		var firstField = document.getElementById('firstField').value;
-		var secondField = document.getElementById('secondField').value;
+		var firstField = $("#firstField").val();
+		var secondField = $("#secondField").val();
 		
 		var divContent = "First field value: <b>" + firstField + "</b> </br>";
 		divContent += "Second field value: <b>" + secondField + "</b> </br>";
@@ -67,8 +75,8 @@
 	
 	//Cancel button function
 	function onCancelClick() {
-		document.getElementById('firstField').value = "";
-		document.getElementById('secondField').value = "";
+		$("#firstField").val('');
+		$("#secondField").val('');
 		$("#alert-div").html('');
 		$("#alert-div").hide('');
 	}
